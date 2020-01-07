@@ -33,9 +33,11 @@
             }
         }
         public function index()
-        {
+        {   
+            if ($_SERVER['REQUEST_METHOD'] === 'GET') {
             $customers = $this->customerDB->getAll();
             include 'view/list.php';
+            }
         }
         public function delete()
         {

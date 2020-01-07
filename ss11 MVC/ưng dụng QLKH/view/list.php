@@ -1,5 +1,11 @@
 <h2>Danh sách khách hàng</h2>
 <a href="./index.php?page=add">Thêm mới</a>
+<div>
+  <form method= "POST">
+      <input type="text" name="search" action =seacrh.php>
+      <button>Search</button>
+  </form>
+</div>
 <table class="table">
   <thead>
   <tr>

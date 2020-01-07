@@ -49,4 +49,11 @@ class CustomerDB
         $statement->bindParam(1, $id);
         return $statement->execute();
       }
+
+      public function search($prefix){
+        $spl = "SELECT * FROM table WHERE customer LIKE ?.'%'";
+        $statement = $this->connection->prepare($sql);
+        $statement->bindParam(1, $prefix);
+        return $statement->execute();
+      }
 }
